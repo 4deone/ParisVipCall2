@@ -3,6 +3,7 @@ package com.deone.parisvipcall.activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,7 +11,7 @@ import android.widget.Spinner;
 
 import com.deone.parisvipcall.R;
 
-public class AjouterActivity extends AppCompatActivity implements View.OnClickListener {
+public class AjouterActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     private Button btnAjouterInfo;
     private Button btnAnnulerAjouterInfo;
@@ -41,7 +42,7 @@ public class AjouterActivity extends AppCompatActivity implements View.OnClickLi
         this.spTypeInformation=(Spinner)findViewById(R.id.spinerType);
         this.spTypeInformation.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapterOne = ArrayAdapter.createFromResource(this,
-                R.array.liste_des_types, android.R.layout.simple_spinner_item);
+                R.array.liste_type_choose, android.R.layout.simple_spinner_item);
         adapterOne.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         this.spTypeInformation.setAdapter(adapterOne);
         this.spinnerTypeChoice = "";
@@ -49,7 +50,7 @@ public class AjouterActivity extends AppCompatActivity implements View.OnClickLi
         this.spPrivateMode=(Spinner)findViewById(R.id.spinerPrivate);
         this.spPrivateMode.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapterTwo = ArrayAdapter.createFromResource(this,
-                R.array.liste_des_types, android.R.layout.simple_spinner_item);
+                R.array.liste_private_mode, android.R.layout.simple_spinner_item);
         adapterTwo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         this.spPrivateMode.setAdapter(adapterTwo);
         this.spinnerPrivateMode = "";
@@ -62,5 +63,19 @@ public class AjouterActivity extends AppCompatActivity implements View.OnClickLi
         }else if(v == btnAnnulerAjouterInfo){
 
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if(view == spTypeInformation){
+            this.spinnerTypeChoice = parent.getItemAtPosition(position).toString();
+        }else if(view == spPrivateMode){
+            this.spinnerPrivateMode = parent.getItemAtPosition(position).toString();
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

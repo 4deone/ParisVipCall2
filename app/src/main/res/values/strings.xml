@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Paris Vip Call</string>
+    <string-array name="liste_type_choose">
+        <item>EMAIL</item>
+        <item>ROUTER</item>
+        <item>SWITCH</item>
+        <item>ORDINATEUR</item>
+        <item>SKYPE</item>
+        <item>FACEBOOK</item>
+        <item>CAMPAGNE</item>
+        <item>WIFI</item>
+    </string-array>
+    <string-array name="liste_private_mode">
+        <item>OUI</item>
+        <item>NON</item>
+    </string-array>
 </resources>

@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.deone.parisvipcall.R;
 import com.deone.parisvipcall.adapter.MyArrayAdapter;
 import com.deone.parisvipcall.models.LogInformation;
+import com.deone.parisvipcall.parser.JSONParser;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 import org.json.JSONArray;

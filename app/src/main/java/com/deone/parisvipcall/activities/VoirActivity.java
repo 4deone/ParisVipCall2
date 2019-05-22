@@ -60,7 +60,7 @@ public class VoirActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Snackbar.make(findViewById(R.id.parentLayout), list.get(position).getLogin() + " => " + list.get(position).getPassword(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(findViewById(R.id.parentLayout), list.get(position).getCommentaire() + " => " + list.get(position).getPrivateMode(), Snackbar.LENGTH_LONG).show();
             }
         });
 
@@ -176,7 +176,7 @@ public class VoirActivity extends AppCompatActivity {
                                 //JSONObject phoneObject = innerObject.getJSONObject(Keys.KEY_PHONE);
                                 //String phone = phoneObject.getString(Keys.KEY_MOBILE);
 
-                                //model.setLogin(login);
+                                model.setLogin(login);
                                 model.setPassword(password);
                                 model.setTypeChoose(typeChoose);
                                 model.setPrivateMode(privateMode);

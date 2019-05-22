@@ -4,45 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tvLogin"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textAppearance="?android:textAppearanceLarge"
-        tools:text="TextView" />
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/tvLogin"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView" />
 
-    <TextView
-        android:id="@+id/tvPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textAppearance="?android:textAppearanceMedium"
-        tools:text="TextView" />
+        <TextView
+            android:id="@+id/tvPassword"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvCommentaire"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textAppearance="?android:textAppearanceMedium"
-        tools:text="TextView" />
-
-    <TextView
-        android:id="@+id/tvTypeChoose"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textAppearance="?android:textAppearanceLarge"
-        tools:text="TextView" />
-
-    <TextView
-        android:id="@+id/tvPrivateMode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textAppearance="?android:textAppearanceMedium"
-        tools:text="TextView" />
+        android:layout_marginHorizontal="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/tvTypeChoose"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="TextView" />
+    </LinearLayout>
 </RelativeLayout>

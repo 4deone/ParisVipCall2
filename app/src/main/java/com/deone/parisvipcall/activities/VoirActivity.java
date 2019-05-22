@@ -43,9 +43,6 @@ public class VoirActivity extends AppCompatActivity {
         setContentView(R.layout.activity_voir);
         Fresco.initialize(this);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         /**
          * Array List for Binding Data from JSON to this List
          */

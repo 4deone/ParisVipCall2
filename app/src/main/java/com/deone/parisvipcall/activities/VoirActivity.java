@@ -20,6 +20,8 @@ import com.deone.parisvipcall.R;
 import com.deone.parisvipcall.adapter.MyArrayAdapter;
 import com.deone.parisvipcall.models.LogInformation;
 import com.deone.parisvipcall.parser.JSONParser;
+import com.deone.parisvipcall.util.InternetConnection;
+import com.deone.parisvipcall.util.Keys;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 import org.json.JSONArray;
@@ -61,7 +63,7 @@ public class VoirActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Snackbar.make(findViewById(R.id.parentLayout), list.get(position).getName() + " => " + list.get(position).getPhone(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(findViewById(R.id.parentLayout), list.get(position).getLogin() + " => " + list.get(position).getPassword(), Snackbar.LENGTH_LONG).show();
             }
         });
 
@@ -164,8 +166,12 @@ public class VoirActivity extends AppCompatActivity {
                                  *
                                  */
                                 JSONObject innerObject = array.getJSONObject(jIndex);
-                                String name = innerObject.getString(Keys.KEY_NAME);
-                                String country = innerObject.getString(Keys.KEY_COUNTRY);
+                                String login = innerObject.getString(Keys.KEY_LOGIN);
+                                String password = innerObject.getString(Keys.KEY_PASSWORD);
+                                String typeChoose = innerObject.getString(Keys.KEY_TYPE_CHOOSE);
+                                String privateMode = innerObject.getString(Keys.KEY_PRIVATE_MODE);
+                                String date = innerObject.getString(Keys.KEY_DATE);
+                                String commentaire = innerObject.getString(Keys.KEY_COMMENTAIRE);
 
                                 /**
                                  * Getting Object from Object "phone"
@@ -173,8 +179,12 @@ public class VoirActivity extends AppCompatActivity {
                                 //JSONObject phoneObject = innerObject.getJSONObject(Keys.KEY_PHONE);
                                 //String phone = phoneObject.getString(Keys.KEY_MOBILE);
 
-                                model.setName(name);
-                                model.setCountry(country);
+                                model.setLogin(login);
+                                model.setPassword(password);
+                                model.setTypeChoose(typeChoose);
+                                model.setPrivateMode(privateMode);
+                                model.setDate(date);
+                                model.setCommentaire(commentaire);
 
                                 /**
                                  * Adding name and phone concatenation in List...

@@ -154,7 +154,7 @@ public class VoirActivity extends AppCompatActivity {
                                  * and
                                  * Adding into List
                                  */
-                                MyDataModel model = new MyDataModel();
+                                LogInformation model = new LogInformation();
 
                                 /**
                                  * Getting Inner Object from contacts array...

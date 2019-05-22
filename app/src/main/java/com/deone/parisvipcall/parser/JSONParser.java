@@ -31,8 +31,7 @@ public class JSONParser {
             Request request = new Request.Builder()
                     .url(MAIN_URL)
                     .build();
-            response = client.newCall(request).execute();
-            Log.e(TAG, "" + response.body().string());
+            response = client.newCall(request).execute();// LES INFORMATIONS SONT BIEN RECUES
             return new JSONObject(response.body().string());
         } catch (@NonNull IOException | JSONException e) {
             Log.e(TAG, "" + e.getLocalizedMessage());

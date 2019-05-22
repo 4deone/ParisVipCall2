@@ -120,7 +120,7 @@ public class VoirActivity extends AppCompatActivity {
         @Nullable
         @Override
         protected Void doInBackground(Void... params) {
-
+            Log.i(JSONParser.TAG, "un");
             /**
              * Getting JSON Object from Web Using okHttp
              */
@@ -130,14 +130,17 @@ public class VoirActivity extends AppCompatActivity {
                 /**
                  * Check Whether Its NULL???
                  */
+                Log.i(JSONParser.TAG, "deux");
                 if (jsonObject != null) {
                     /**
                      * Check Length...
                      */
+                    Log.i(JSONParser.TAG, "trois");
                     if(jsonObject.length() > 0) {
                         /**
                          * Getting Array named "contacts" From MAIN Json Object
                          */
+                        Log.i(JSONParser.TAG, "quatre");
                         JSONArray array = jsonObject.getJSONArray(Keys.KEY_CONTACTS);
 
                         /**
@@ -147,6 +150,7 @@ public class VoirActivity extends AppCompatActivity {
 
                         int lenArray = array.length();
                         if(lenArray > 0) {
+                            Log.i(JSONParser.TAG, "cinq");
                             for( ; jIndex < lenArray; jIndex++) {
 
                                 /**
@@ -191,10 +195,11 @@ public class VoirActivity extends AppCompatActivity {
                         }
                     }
                 } else {
-
+                    Log.i(JSONParser.TAG, "six");
                 }
             } catch (JSONException je) {
                 Log.i(JSONParser.TAG, "" + je.getLocalizedMessage());
+                Log.i(JSONParser.TAG, "sept");
             }
             return null;
         }

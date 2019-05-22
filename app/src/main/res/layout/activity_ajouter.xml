@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.AjouterActivity">
+    <TextView
+        android:text="Ajouter une information"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edtvEmail"
+            android:layout_weight="1"
+            android:hint="Entrer votre Email"
+            android:inputType="textEmailSubject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/edttvPassword"
+            android:layout_weight="1"
+            android:hint="Entrer votre Password"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:id="@+id/spinerType"
+            android:layout_weight="1"
+            android:spinnerMode="dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-</android.support.constraint.ConstraintLayout>
+        <Spinner
+            android:id="@+id/spinerPrivate"
+            android:layout_weight="1"
+            android:spinnerMode="dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/edttvCommentaire"
+            android:layout_weight="1"
+            android:hint="Entrer votre Commentaire"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="1dp"
+        android:layout_weight="6"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/annulerInfo"
+            android:layout_weight="1"
+            android:text="ANNULER"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/AjouterInfo"
+            android:layout_weight="1"
+            android:text="AJOUTER"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

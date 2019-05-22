@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/llAjouterInfo"
     tools:context=".activities.AjouterActivity">
     <TextView
         android:text="Ajouter une information"
@@ -44,8 +45,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <Spinner
-            android:id="@+id/spinerPrivate"
+        <CheckBox
+            android:id="@+id/cbPrivateMode"
+            android:text="Mode Privé"
+            android:checked="false"
+            android:textSize="13dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:spinnerMode="dialog"
             android:layout_width="match_parent"

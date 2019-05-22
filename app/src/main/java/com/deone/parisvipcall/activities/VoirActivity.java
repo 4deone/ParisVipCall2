@@ -112,8 +112,8 @@ public class VoirActivity extends AppCompatActivity {
                 jIndex=x;
 
             dialog = new ProgressDialog(VoirActivity.this);
-            dialog.setTitle("Hey Wait Please..."+x);
-            dialog.setMessage("I am getting your JSON");
+            dialog.setTitle("Wait Please...");
+            dialog.setMessage("Chargement des informations");
             dialog.show();
         }
 

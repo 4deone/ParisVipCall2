@@ -2,6 +2,7 @@ package com.deone.parisvipcall.parser;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.OkHttpClient;
@@ -31,6 +32,7 @@ public class JSONParser {
                     .url(MAIN_URL)
                     .build();
             response = client.newCall(request).execute();
+            Log.e(TAG, "" + response.body().string());
             return new JSONObject(response.body().string());
         } catch (@NonNull IOException | JSONException e) {
             Log.e(TAG, "" + e.getLocalizedMessage());

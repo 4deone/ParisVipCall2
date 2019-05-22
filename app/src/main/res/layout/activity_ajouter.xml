@@ -24,7 +24,7 @@
         android:gravity="center"
         android:orientation="vertical">
         <EditText
-            android:id="@+id/edtvEmail"
+            android:id="@+id/edtvLogin"
             android:layout_weight="1"
             android:hint="Entrer votre Email"
             android:inputType="textEmailSubject"

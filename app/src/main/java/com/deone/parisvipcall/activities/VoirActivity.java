@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.deone.parisvipcall.R;
+import com.deone.parisvipcall.adapter.MyArrayAdapter;
+import com.deone.parisvipcall.models.LogInformation;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 import org.json.JSONArray;
@@ -28,8 +30,9 @@ import java.util.ArrayList;
 public class VoirActivity extends AppCompatActivity {
 
     private ListView listView;
-    private ArrayList<MyDataModel> list;
+    private ArrayList<LogInformation> list;
     private MyArrayAdapter adapter;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,7 @@ public class VoirActivity extends AppCompatActivity {
         setContentView(R.layout.activity_voir);
         Fresco.initialize(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         /**

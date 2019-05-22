@@ -1,68 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        >
-        <TextView
-            android:id="@+id/tvLogin"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textAppearance="?android:textAppearanceLarge"
-            tools:text="TextView" />
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="TextView" />
 
-        <TextView
-            android:id="@+id/tvPassword"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textAppearance="?android:textAppearanceMedium"
-            tools:text="TextView" />
-
-        <TextView
-            android:id="@+id/tvCommentaire"
-            android:layout_weight="4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textAppearance="?android:textAppearanceMedium"
-            tools:text="TextView" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvPassword"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        >
-        <TextView
-            android:id="@+id/tvTypeChoose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textAppearance="?android:textAppearanceLarge"
-            tools:text="TextView" />
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        tools:text="TextView" />
 
-        <TextView
-            android:id="@+id/tvPrivateMode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textAppearance="?android:textAppearanceMedium"
-            tools:text="TextView" />
+    <TextView
+        android:id="@+id/tvCommentaire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        tools:text="TextView" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvTypeChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="TextView" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvPrivateMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        tools:text="TextView" />
+</RelativeLayout>

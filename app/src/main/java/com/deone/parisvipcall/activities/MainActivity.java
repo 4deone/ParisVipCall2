@@ -16,7 +16,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.initConfiguration();
+    }
 
+    private void initConfiguration() {
         this.btnAddInfo = (Button)findViewById(R.id.btnAddInfo);
         this.btnVoirInfo = (Button)findViewById(R.id.btnVoirInfo);
         this.btnAddInfo.setOnClickListener(this);
@@ -29,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             finish();
             startActivity(new Intent(MainActivity.this, AjouterActivity.class));
         }else if(v == btnVoirInfo){
-            finish();
             startActivity(new Intent(MainActivity.this, VoirActivity.class));
         }
     }

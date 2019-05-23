@@ -67,7 +67,7 @@ public class VoirActivity extends AppCompatActivity {
         /**
          * Just to know onClick and Printing Hello Toast in Center.
          */
-        Toast toast = Toast.makeText(getApplicationContext(), "Click on FloatingActionButton to Load JSON", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "Click to Download information", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
 

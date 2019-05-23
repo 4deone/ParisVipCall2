@@ -81,7 +81,7 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="No Account? Sign Up." />
+            android:text="J'accepte les conditions d'utilisation du logiciel." />
 
     </LinearLayout>
 

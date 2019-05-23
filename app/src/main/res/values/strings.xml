@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Paris Vip Call</string>
+    <string name="navigation_drawer_open">Open de DrawerLayout</string>
+    <string name="navigation_drawer_close">Close de DrawerLayout</string>
     <string-array name="liste_type_choose">
         <item>EMAIL</item>
         <item>ROUTER</item>

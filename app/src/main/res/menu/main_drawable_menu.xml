@@ -4,26 +4,50 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_cv"
-            android:icon="@drawable/ic_cv"
-            android:title="Curriculum" />
-        <item
-            android:id="@+id/nav_password"
-            android:icon="@drawable/ic_password"
-            android:title="Curriculum" />
-        <item
-            android:id="@+id/nav_chat"
-            android:icon="@drawable/ic_cv"
-            android:title="Chat" />
+
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_profile"
             android:title="Profile" />
         <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_cv"
+            android:title="Chat" />
+
+    </group>
+
+    <item android:title="Password">
+
+        <item
+            android:id="@+id/nav_see_password"
+            android:icon="@drawable/ic_voir"
+            android:title="See Password" />
+        <item
+            android:id="@+id/nav_add_password"
+            android:icon="@drawable/ic_add"
+            android:title="Add Password" />
+    </item>
+
+    <item android:title="curriculum">
+        <item
+            android:id="@+id/nav_see_cv"
+            android:icon="@drawable/ic_cv"
+            android:title="See CV" />
+        <item
+            android:id="@+id/nav_add_cv"
+            android:icon="@drawable/ic_add"
+            android:title="Add CV" />
+    </item>
+
+    <item android:title="system">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Parametres" />
+        <item
             android:id="@+id/nav_deconnexion"
             android:icon="@drawable/ic_deconnexion"
             android:title="Deconnexion" />
-    </group>
+    </item>
 
 </menu>

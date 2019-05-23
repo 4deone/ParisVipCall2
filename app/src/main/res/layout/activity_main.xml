@@ -9,44 +9,96 @@
     tools:context=".activities.MainActivity">
 
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginVertical="3dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/paris_vip_call"
+             />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="A PROPOS" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginVertical="3dp"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <EditText
+            android:id="@+id/edtvEnvoieLogin"
+            android:layout_weight="1"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Entrer votre login" />
 
+        <EditText
+            android:id="@+id/edtvEnvoiePassword"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Entrer votre password" />
+
+        <Button
+            android:id="@+id/btnConnexion"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="CONNEXION" />
+
+        <TextView
+            android:id="@+id/tvCreateCompte"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Account? Sign Up." />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_weight="1.7"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_weight="1.5"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginVertical="3dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btnAddInfo"
+            android:id="@+id/btnGoogle"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="AJOUTER" />
+            android:text="GOOGLE" />
 
         <Button
-            android:id="@+id/btnVoirInfo"
+            android:id="@+id/btnFacebook"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="VOIR" />
+            android:text="FACEBOOK" />
 
     </LinearLayout>
-
 
 </LinearLayout>

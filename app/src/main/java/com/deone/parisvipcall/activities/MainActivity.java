@@ -10,8 +10,7 @@ import com.deone.parisvipcall.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnAddInfo;
-    private Button btnVoirInfo;
+    private Button btnConnexion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,19 +19,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initConfiguration() {
-        /*this.btnAddInfo = (Button)findViewById(R.id.btnAddInfo);
-        this.btnVoirInfo = (Button)findViewById(R.id.btnVoirInfo);
-        this.btnAddInfo.setOnClickListener(this);
-        this.btnVoirInfo.setOnClickListener(this);*/
+        this.btnConnexion = (Button)findViewById(R.id.btnConnexion);
+        this.btnConnexion.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if(v == btnAddInfo){
-            //finish();
-            //startActivity(new Intent(MainActivity.this, AjouterActivity.class));
-        }else if(v == btnVoirInfo){
-            //startActivity(new Intent(MainActivity.this, VoirActivity.class));
+        if(v == btnConnexion){
+            finish();
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
         }
     }
 }
